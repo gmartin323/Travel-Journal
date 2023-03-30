@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Inter, sans-serif;
+    color: #2B283A;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    background: #F55A5A;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 1em;
+    margin-bottom: 9px;
+}
+
+.header > img {
+    height: 24px;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 85%;
+    gap: 19px;
+    padding: 18px 0;
+}
+
+.card--image {
+    height: 168px;
+    aspect-ratio: 0.75;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card--location {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.card--location_title {
+    font-size: 0.625rem;
+    font-weight: 400;
+    letter-spacing: 0.13em;
+    margin-left: 4px;
+    text-transform: uppercase
+}
+
+.card--title {
+    padding-top: 0.44rem;
+}
+
+.card--date {
+    font-size: 0.625rem;
+    font-weight: 700;
+    padding-top: 0.8rem;
+}
+
+.card--desc {
+    font-size: 0.625rem;
+    line-height: 150%;
+    padding-top: 0.56rem;
+}
+
+/* hr is messing with card alignment??? */
+
+hr {
+    border-top: 1px solid #F5F5F5;
+    width: 100%;
+}
+
+@media only screen and (max-width: 460px) {
+  .card {
+      flex-direction: column;
+      gap: 8px;
+  }
+  .card--image {
+      aspect-ratio: 1.78;
+      width: 95%;
+  }
+  .card--info {
+      width: 85%;
+  }
+  
+  .card--header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 8px;
+  }
+  
+  .card--title {
+      font-size: 1.2rem;
+      padding-top: 0;
+  }
+  
+  .card--location {
+      justify-content: flex-end;
+  }
+}
